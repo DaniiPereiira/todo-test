@@ -1,27 +1,205 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+body{
+  
+  padding: 0px;
+  box-sizing: border-box;
+  background-color:#f2eaf3;
+ 
+}
+.App{
+  /* display: grid; */
+  margin: 0 auto;
+  max-width: 375px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.today {
+  font-family: Nunito;
+  width: 79px;
+  height: 41px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.today-day{
+  font-family: Nunito;
+  font-weight: 700;
+  width: 79px;
+  height: 25px;
+  
+  font-size: 18px;
+  line-height: 24,55px;
+  color: #7F00FF;
+}
+
+.today-date{
+  font-family: Nunito;
+  font-weight: 600;
+  width: 74px;
+  height: 16px;
+  font-size: 10px;
+  line-height: 16,37px;
+  color: #4A4A4A;
+}
+
+.img{
+  margin-left: 186px;
+  margin-top: 30px;
+}
+
+img{
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+
+image, today {
+  display: 
+  inline-block;
+}
+
+icon, h4 {
+  display: inline-block;
+}
+
+h2, count{
+  display: inline-block;
+}
+
+.group3 {
+  width: 300px;
+  height: 66px;
+}
+
+h2 {
+  font-family: Nunito;
+  font-weight: 700;
+  width: 51px;
+  height: 66px;
+  font-size: 24px;
+  line-height: 32.74px;
+  color: #262626;
+  margin-left: 30px;
+  margin-top: 106px;
+}
+
+.count {
+  font-family: Nunito;
+  width: 119px;
+  height: 19px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7F00FF;
+  margin-left: 160px;
+  margin-top: 148;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+.task{
+  font-family: Nunito;
+  width: 271px;
+  height: 34px;
+  border-radius: 4px;
+  border: 2px;
+  border-color: #BFBFBF;
+  border-left: 21px;
+  padding-top: 62px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21.82px;
+}
+
+.creat-task {
+  border-color: transparent;
+  border: 0px;
+  font-family: Nunito;
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 21.82px;
+  width: 315px;
+  height: 76px;
+  border-radius: 8px;
+  margin-top: 62px;
+  box-shadow: #E100FF;
+  background-image: linear-gradient(
+    to top,  #E100FF, #7F00FF );
+}
+
+.todo-complet{
+  width: 315px;
+  height: 172px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    to top,  #E100FF, #7F00FF );
+    box-shadow: #E100FF;
+
+}
+
+.Checkbox {
+  width:24px;
+  height: 24px;
+}
+
+.todo-list{
+  border-color: #BFBFBF;
+  border: 2px;
+  width: 315px;
+  height: 370px;
+  margin-top: 20px;
+  margin-left: 30px;
+  background-color:#FAFAFA;
+}
+.button-back{
+  height: 13,29px;
+  width: 7,64px;
+  
+}
+
+.top-bar{
+  width: 103px;
+  height: 66px;
+  margin-top: 30px;
+  margin-left: 18px;
+ 
+
+}
+
+input{
+  width: 315px;
+  height: 67px;
+  color: #FAFAFA;
+  border-radius: 8px;
+  /* border: 0px; */
+ 
+}
+
+.task-read{
+  width: 315px;
+  height: 102px;
+  margin-top: 255px;
+  margin-left: 30px;
+
+}
+
+h3{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24,55px;
+  width: 76px;
+  height: 25px;
+
+}
+
+h4{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32,74px;
+  color: #262626 ;
 }
