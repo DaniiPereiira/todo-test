@@ -2,7 +2,11 @@
 import Todo from '../components/Todo';
 import React from 'react'
 import {useState} from 'react';
-import Arrow from '../icons/arrow.svg'
+import Arrow from 'public/icons/arrow.svg'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation';
+import taskIcon from "public/icons/task.svg";
+import './style.css'
 
 
 
@@ -10,6 +14,13 @@ function CreateTaskPage() {
 
 const [taskInput, setTaskInput] = useState("")
 const [listTask, setListTask] = useState(["Teste", "Teste2"])
+
+const router = useRouter()
+
+const onClick = () => {
+  router.push('/')
+
+}
 
 const add = () => {
   setListTask(listTask=>[...listTask, taskInput])
@@ -24,22 +35,31 @@ function todo(){
   return (
     <div className='App'>
 
-      <div className='top-bar'>
-      <button className='button-back' src={Arrow}/>
+      
+<row className="top-bar">
+<Image className='button-back' src={Arrow} onClick={onClick}/>
+</row>    
+  <row className="top-bar-title">
+  <h4>Create Task</h4>
+    </row>    
+      
+
       
       
-      <h4>Create Task</h4>
-      </div>
       
-      {/* <div task-read>  
+      
+      <div className='task-read'>  
       <h3>Task title</h3>
-      <input value={taskInput} onInput={(e)=>{setTaskInput(e.target.value)}}/>
+      <row className="input">
+      <Image className="task-icon" src={taskIcon}/>
+      <input placeholder='Type here' value={taskInput} onInput={(e)=>{setTaskInput(e.target.value)}}/>
+      </row>
       </div> 
-      <div className='todo-list'>{todo}
-      <button type="button" className='creat-task' onClick={add}
+      
+      <button type="button" className='creat-task2' onClick={add}
       >Create task</button>
-      </div>
-         */}
+      
+        
        
 
 

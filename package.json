@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@font/nunito": "^1.0.3",
     "@fontsource/nunito": "^5.0.5",
+    "@next/font": "^13.4.12",
     "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "10.4.14",
     "eslint": "8.45.0",
