@@ -6,6 +6,8 @@ import imagePerfil from "public/eu.jpg"
 import Todo from './components/Todo';
 import { useRouter } from 'next/navigation';
 import {todo} from "./createtask/page"
+import countSelect from './components/Todo';
+
 
 
 function HomePage() {
@@ -25,6 +27,9 @@ function HomePage() {
   router.push('/createtask')
 }
 
+
+
+
 const [todos, setTodos] = useState([
   {
     id: 1,
@@ -38,6 +43,8 @@ const [todos, setTodos] = useState([
    
   }]);
 
+  
+
   return (
     <div className="App">
      
@@ -50,7 +57,7 @@ const [todos, setTodos] = useState([
         </div>
         <div className='goup3'>
           <h2>Task List</h2>
-          <count className='count'>Task finished</count>
+          <count className='count'> {countSelect} Task finished</count>
           </div>
        
         <div className='todo-list'>{todos.map((todo) => ( <Todo key={todo.id} todo={todo} />))}

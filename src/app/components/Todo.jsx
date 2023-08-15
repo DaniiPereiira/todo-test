@@ -29,16 +29,40 @@ function Todo({todo}) {
 
   const handleOnChange = () => {
     setIsCheck(!isCheck);
+    
   };
+
+  function countSelect () {
+    var checkBoxes = document.querySelectorAll(".Checkbox")
+    var selecionados = 0
+    checkBoxes.forEach(function(el) {
+      
+      if(isCheck) {
+          selecionados++;
+      }
+  
+     
+     
+    });
+    
+    return selecionados
+  }
+
+ 
+
+
+  
+
 
   return (
     <div className="todo">
+     
     <div className="content">
  
     <div className='task'>
     <input className='Checkbox' type='checkbox' id='topping' value='Panner' checked={isCheck} onChange={handleOnChange}/>
-    
      
+    
       
     <Image className="icondelete" src={iconDelete} onClick={deleteTask} />
     <Image className='iconEit' src={iconEdit} onClick={goToEdit}  />
